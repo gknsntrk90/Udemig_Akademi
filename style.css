@@ -1,0 +1,293 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+}
+
+
+
+                                /**!HEADER ALANI NAV BAR BOOTSTAN ÇEKİLDİ***/
+
+
+#nav-bar{
+    position: sticky; /**pozisyonu yapışacak navbarın ekran aşağı kayarken bizimle gelsin diye***/
+    top: 0; /***en üst kısma sabitliyoruz 0 ile***/
+    z-index: 10; /***bu sayede kaymada rahat hareket edecek***/
+}
+.navbar{
+    /**to right renkler soldan sağa geçeceği için kullanıyoruz****/
+    background-image: linear-gradient(to right,#b95dc7,#41095d);
+}
+.navbar-brand img{
+    height: 40px;
+    padding-left: 20px; /***sol içten boşluk verdik***/
+}
+/**img altındaki navvar içerisinde ki li***/
+.navbar-nav li{
+    padding: 0 10px; /**aşağıdan yukarıdan 0 sağdan solan 10px veriyoruz***/
+
+}
+.navbar-nav li a{
+    color: #fff;
+    font-weight: 600px; /**font kalınlığı***/
+    float: right; /**ekranın sağına yasla***/
+    text-align: left; /**sol kısımdan izalanmalarını sağlarız***/
+}
+/***icon***/
+.fa-bars{
+    color: #fff;
+    font-size: 30px; /***boyunu büyütüyoruz font'un***/
+}
+
+
+
+
+
+
+
+
+
+
+                                        /***!BANNER ALANI****/
+
+#banner{
+    /***soldan sağ doğru renk geçişi olacağı için linear-gradient to right kullanmalıyız***/
+    background-image: linear-gradient(to right, #b95dc7, #41095d);
+    color: #fff;
+    padding: 5%; /***iç boşluk veriyoruz**/
+}
+.title{
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 100px; /**kendini yukarıdan 100 px'lik uzaklaştırsın yani navbardan uzaklaştıracak***/
+}
+.play-btn{
+    width: 50px; /***play logomuzu boyutlandırıyoruz***/
+    margin: 20px; /***dış boşluk sayesinde biraz sağ doğru kaydırıyoruz***/
+}
+#banner a{
+    color: #fff;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+                                            /***SERVİS ALANI***/
+
+#service{
+    padding: 80px 0; /***yukarıdan aşağı 80px sağdan soldan 0***/
+}
+/**servis classının içinde ki resim****/
+.services img{
+    width: 100px;
+}
+.services{
+    padding: 20px; /***iç boşluk***/
+}
+.services h4{
+    padding: 5px; /***paragraflara iç boşuk***/
+    margin-top: 20px; /**yuıarkdan 20px uzaklaşsınlar****/
+}
+/***işlem öncesinde content veriyoruz ve içi boş oluyor***/
+.title::before{
+    content: "";
+    background-color: #7b1798;
+    height: 5px;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block; /**display block ile görseli ön yüze çıkarmış oluyoruz***/
+    transform: translateY(63px); /**bu sayede ise yazının altına kaydırmış oluyoruz***/
+}
+/**işlem sonrasında ***/
+.title::after{
+    content: "";
+    background-color: #7b1798;
+    height: 10px;
+    width: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block; /**display block ile görseli ön yüze çıkarmış oluyoruz***/
+    transform: translateY(8px); /**bu sayede ise yazının altına kaydırmış oluyoruz***/
+}
+/**button**/
+#service .btn-primary{
+    box-shadow: none;
+    padding: 8px 25px;
+    border: none;
+    border-radius: 20px;
+    background-image: linear-gradient(to right, #b95dc7, #41095d);
+    /**butonu ortalamak için position absolute vereceğiz .btn-wrapper'a ise relative vereceğiz***/
+    position: absolute;
+    width: auto;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.btn-wrapper{
+    position: relative;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                            /***ABOUT US**/
+#about-us{
+    /***h1 ve p ve li'lerimizin arka fonuna gölge koyuyoruz**/
+    background-color: #f8f9fa;
+    padding-bottom: 50px; /**gölgenin aşağısından boşluk***/
+    padding-top: 50px; /**gölgenin yukarısından boşluk*****/
+}
+.about-title{
+    font-size: 40px;
+    font-weight: 600;
+    padding-top: 50px; /**yukarıdan padding verip neden bizi seçmelisiniz ile neden en iyiyiz arasını açtık**/
+}
+#about-us ul{
+    margin-left: 20px;
+}
+#about-us ul li{
+    margin: 10px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+                                        /***CUSTOMERS BÖLÜMÜ***/
+#customers{
+    margin: 100px 0; /***dış boşlukver yukarıdan aşağıdan 100px sağdan soldan verme****/ 
+}
+.customers{
+    border-left: 4px solid #7b1798;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+#cusotmers .title{
+    margin-bottom: 50px;
+}
+.customers img{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    margin: 0 10px; /**yukarıdan aşağı 0 sağdan solda 10px****/
+}
+.user-details{
+    display: inline-block; /***kendi alanını kapsa ama satır içi özellik de olsun bu sayede p lerimizi resimlerin yanına çekmiş olduk****/
+    font-size: 15px;
+}
+
+
+
+                                    /***SOCIAL MEDIA VE ICONLARI ALANI***/
+#social-media{
+    /**iconların arka fonlarına hafif koyu beyaz fon atıyoruz***/
+    background: #f8f9fa;
+    padding: 100px 0; /**yukarıdan aşağı 100px sağdan soldan 0***/
+}
+#social-media p{
+    font-size: 36px;
+    font-size: 600;
+    margin-bottom: 30px;
+}
+.social-icons img{
+    width: 60px;
+    transition: 0.5s;
+}
+.social-icons a:hover img{
+    /**mini sosyal media logolarımızın üzerime fare geldiğinde hafif yukarı hareket edecekler***/
+    transform: translateY(-10px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                            /**FOOTER***/
+#footer{
+background-image: linear-gradient(to right, #b95dc7, #41095d);
+color: white;
+}
+.footer-img{
+    width: 100%;
+}
+.footer-box{
+    padding: 20px; /***iç boşluk**/
+}
+.footer-box img{
+    width: 120px;
+    margin-bottom: 20px;
+}
+.footer-box .icons{
+    margin-right: 8px; /***sağdan hafif boşluk verdik yazılarla iconlar arasına***/
+    font-size: 25px;
+    height: 40px;
+    width: 40px;
+    text-align: center; /***ortalayalım**/
+    padding-top: 7px;
+    border-radius: 2px;
+    background-image: linear-gradient(to right, #b95dc7, #41095d);
+}
+/**input**/
+.footer-box .form-control{
+    box-shadow: none !important;
+    margin-top: 25px;
+    max-width: 250px;
+}
+/**button***/
+.footer-box .btn-primary{
+    box-shadow: none;
+    margin-top: 30px;
+    background-image: linear-gradient(to right, #b95dc7, #41095d);
+    border: none;
+}
+hr{
+    background-color: whitesmoke;
+    height:1px;
+}
+.copyright{
+    margin-bottom: 0;
+    padding-bottom: 20px;
+    text-align: center;
+}
